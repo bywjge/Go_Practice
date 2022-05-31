@@ -19,6 +19,13 @@ func main() {
 		}
 		fmt.Println(n)
 	}
+	var n = 0
+	for ; n < 5; n++ {
+		if n%2 == 0 {
+			continue
+		}
+		fmt.Println(n)
+	}
 	for i <= 3 {
 		fmt.Println(i)
 		i = i + 1
