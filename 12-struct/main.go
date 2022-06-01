@@ -11,6 +11,7 @@ func main() {
 	a := user{name: "wang", password: "1024"}
 	b := user{"wang", "1024"}
 	c := user{name: "wang"}
+
 	c.password = "1024"
 	var d user
 	d.name = "wang"
@@ -25,6 +26,7 @@ func checkPassword(u user, password string) bool {
 	return u.password == password
 }
 
+// 用指针能对结构体进行修改, 避免对大结构体拷贝的开销
 func checkPassword2(u *user, password string) bool {
 	return u.password == password
 }
